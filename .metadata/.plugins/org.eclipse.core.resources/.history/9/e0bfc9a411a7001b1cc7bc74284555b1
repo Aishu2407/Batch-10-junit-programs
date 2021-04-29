@@ -1,0 +1,5 @@
+package com.tyss.junit.assignment1;
+
+public class Jdbcclass {
+
+}

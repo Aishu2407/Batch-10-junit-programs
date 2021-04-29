@@ -1,0 +1,71 @@
+package com.tyss.junit.assignment1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class Implclass implements Operations{
+
+	
+	
+	@Override
+	public void update() {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ems?user=root&password=root");
+
+			String que = "update Employee set name=? where id=?";
+			pstmt = conn.prepareStatement(que);
+			// setting parameters
+			pstmt.setString(1, "bindu");
+			pstmt.setInt(2, 3);
+			
+			pstmt.setString(1, "rakshu");
+			pstmt.setInt(2, 2);
+
+			int count = pstmt.executeUpdate();
+			System.out.println("update sucessfull......");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		
+	}
+		
+
+	@Override
+	public void select() {
+		Connection con=null;
+		Statement stmt=null;
+		ResultSet rs=null;
+		try {
+			//1.load the driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			//2.get connection via driver
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ems?user=root&password=root");
+			//3.issue sql query via connection
+			stmt=con.createStatement();
+			rs=stmt.executeQuery("select * from Employee");
+			//4.process the result
+			while(rs.next())
+			{
+				System.out.println(rs.getInt("id"));
+				System.out.println(rs.getString("name"));
+				System.out.println(rs.getInt("sal"));
+				System.out.println(rs.getString("dept"));
+				System.out.println(rs.getInt("phno"));
+				System.out.println("_________________");
+			}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		
+	}
+}

@@ -1,0 +1,14 @@
+package com.tyss.junit.programs;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MathUtilTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,12 @@
+INDEX VERSION 1.131+C:\javacode\ty-jdbc\.metadata\.plugins\org.eclipse.jdt.core
+794054043.index
+4185820023.index
+2671099652.index
+4120533709.index
+2366785220.index
+832272844.index
+998786058.index
+378198441.index
+3482391873.index
+1289320443.index
+3745877248.index

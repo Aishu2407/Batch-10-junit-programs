@@ -1,0 +1,45 @@
+package com.tyss.junit.assignment1;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.tyss.junit.assignment1.My.JDBCCommands;
+
+	class JDBCCommandsTest {
+
+	@Test
+	void testAdd() {
+	boolean expected=true;
+	JDBCCommands comm=new JDBCCommands();
+	boolean actual= comm.add("kanasu", 201);
+	assertEquals(expected,actual);
+	}
+	@Test
+
+	void testUpdate() {
+	boolean expected=true;
+	JDBCCommands comm=new JDBCCommands();
+	boolean actual= comm.update("appu",3);
+	assertEquals(expected,actual);
+	}
+	@Test
+	void testDelete() {
+	boolean expected=true;
+	JDBCCommands comm=new JDBCCommands();
+	boolean actual= comm.delete("abhi");
+	assertEquals(expected,actual);
+	}
+	@Test
+	void testSelect() {
+	boolean expected=true;
+	JDBCCommands comm=new JDBCCommands();
+	boolean actual= comm.select("aish");
+	assertEquals(expected,actual);
+
+	}
+
+	}
+
+	
+

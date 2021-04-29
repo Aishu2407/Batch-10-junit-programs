@@ -1,0 +1,8 @@
+package com.tyss.junit.assignment1;
+
+public interface Operations {
+
+	void update();
+	void select();
+	
+}

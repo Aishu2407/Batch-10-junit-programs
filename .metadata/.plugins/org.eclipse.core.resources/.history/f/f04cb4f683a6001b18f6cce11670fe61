@@ -1,0 +1,10 @@
+package com.tyss.junit.assignment1;
+
+public class Implclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
